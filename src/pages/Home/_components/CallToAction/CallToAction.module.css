@@ -1,0 +1,13 @@
+.call-to-action {
+  position: relative;
+  min-height: 100vh;
+  padding: 6.4rem;
+  
+}
+
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

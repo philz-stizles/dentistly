@@ -1,0 +1,29 @@
+.icon-button {
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  height: 100%;
+}
+
+.primary {
+  background-color: #FF582A;
+  color: #fff;
+}
+
+.secondary {
+  background-color: #DCEBF7;
+  color: #FF582A;
+}
+
+.outlined {
+  border-color: #212529;
+  color: #212529;
+}
+
+.white {
+  background-color: #fff;
+  color: #212529;
+}

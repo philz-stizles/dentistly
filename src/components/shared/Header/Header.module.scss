@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 6.4rem;
+  z-index: 100;
+}
+
+.menu,
+.logo,
+.auth {
+  display: flex;
+  align-items: center;
+}
+
+.menu,
+.auth {
+  gap: 0.4rem;
+}

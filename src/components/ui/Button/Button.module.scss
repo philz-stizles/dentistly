@@ -1,0 +1,28 @@
+.button {
+  border-radius: 50px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+ 
+  cursor: pointer;
+  transition: border-color 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary {
+  background-color: #f76707;
+  color: #fff;
+}
+
+.outlined {
+  border-color: #212529;
+  color: #212529;
+}
+
+.white {
+  background-color: #fff;
+  color: #212529;
+}

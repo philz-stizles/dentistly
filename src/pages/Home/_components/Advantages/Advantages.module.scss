@@ -1,0 +1,51 @@
+.advantages {
+  min-height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.container {
+  min-height: inherit;
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heading {
+  position: absolute;
+  top: 54%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.advantage-list {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 28rem;
+  height: 32rem;
+}
+
+.advantage-card {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid #212529;
+}

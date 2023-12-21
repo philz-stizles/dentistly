@@ -1,0 +1,48 @@
+.services {
+  position: relative;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 55fr 45fr; //repeat(2, minmax(0, 1fr));
+  min-height: inherit;
+}
+
+.left {
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.icons,
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icons {
+  gap: 0.5rem;
+  margin-bottom: 3.6rem;
+}
+
+.heading {
+  max-width: 80%;
+  margin-bottom: 3.6rem;
+}
+
+.actions {
+  gap: 1.2rem;
+  margin-bottom: 9.6rem;
+}
+
+.service-list {
+  position: absolute;
+  padding-right: 6.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
