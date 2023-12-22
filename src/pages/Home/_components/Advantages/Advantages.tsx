@@ -1,4 +1,5 @@
 import { GoArrowDown } from 'react-icons/go';
+import { motion } from 'framer-motion';
 import { Footer } from '../../../../components/shared';
 import { Heading } from '../../../../components/ui';
 import { Advantage } from '../../../../types';
@@ -11,7 +12,11 @@ type Props = {
 
 const Advantages = ({ advantages }: Props) => {
   return (
-    <section className={classes.advantages}>
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className={classes.advantages}
+    >
       <div className={classes.container}>
         <Footer />
       </div>
@@ -29,7 +34,7 @@ const Advantages = ({ advantages }: Props) => {
       <button className={classes.scroll}>
         <GoArrowDown size={24} />
       </button>
-    </section>
+    </motion.section>
   );
 };
 

@@ -3,10 +3,19 @@ import classes from './IconButton.module.scss';
 import { IconType } from 'react-icons';
 import { Size, Variant } from '../../../types';
 
-const SIZE: { [key: string]: string } = {
-  sm: '',
-  md: '',
-  lg: '',
+const SIZE: { [key: string]: number } = {
+  sm: 18,
+  md: 20,
+  lg: 32,
+  xl: 42,
+};
+
+const VARIANT: { [key: string]: string } = {
+  primary: classes.primary,
+  secondary: classes.secondary,
+  outlined: classes.outlined,
+  white: classes.white,
+  flat: '',
 };
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -18,24 +27,14 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 const Button = ({
   icon: Icon,
   variant = 'primary',
-  size = 'sm',
+  size = 'md',
   ...rest
 }: Props) => {
-  const VARIANT: { [key: string]: string } = {
-    primary: classes.primary,
-    secondary: classes.secondary,
-    outlined: classes.outlined,
-    white: classes.white,
-    flat: '',
-  };
-
   const classNames = `${classes['icon-button']} ${VARIANT[variant]} ${SIZE[size]}`;
-
-  const iconSize = size === 'sm' ? 20 : 32;
 
   return (
     <button className={classNames} {...rest}>
-      <Icon size={iconSize} />
+      <Icon size={SIZE[size]} />
     </button>
   );
 };

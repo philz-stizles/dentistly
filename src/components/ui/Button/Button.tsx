@@ -4,9 +4,17 @@ import { IconType } from 'react-icons';
 import { Size, Variant } from '../../../types';
 
 const SIZE: { [key: string]: string } = {
-  sm: '',
-  md: '',
-  lg: ''
+  sm: classes.sm,
+  md: classes.md,
+  lg: classes.lg,
+  xl: classes.xl,
+};
+
+const VARIANT: { [key: string]: string } = {
+  primary: classes.primary,
+  secondary: classes.secondary,
+  outlined: classes.outlined,
+  white: classes.white,
 };
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -26,12 +34,6 @@ const Button = ({
   label,
   ...rest
 }: PropsWithChildren<Props>) => {
-  const VARIANT: { [key: string]: string } = {
-    primary: classes.primary,
-    outlined: classes.outlined,
-    white: classes.white,
-  };
-
   const classNames = `${classes.button} ${VARIANT[variant]} ${SIZE[size]}`;
 
   return (

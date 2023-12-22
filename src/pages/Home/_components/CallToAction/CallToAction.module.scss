@@ -1,0 +1,142 @@
+.call-to-action {
+  position: relative;
+  min-height: 100vh;
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heading {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(14%);
+}
+
+.revolutionizing,
+.dental-care,
+.with-technology {
+  display: flex;
+  align-items: center;
+}
+
+.revolutionizing {
+  justify-content: space-between;
+  gap: 4.2rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    p {
+      max-width: 14rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+  }
+}
+
+.dental-care {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.4rem;
+}
+
+.dental,
+.care {
+  display: flex;
+  align-items: center;
+}
+
+.with-technology {
+  gap: 1.4rem;
+
+  div {
+    ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+
+      li {
+        margin-right: -1.8rem;
+      }
+    }
+  }
+}
+
+.people {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.4rem;
+  transform: translateY(-24%);
+}
+
+.get-started {
+  margin-top: 1.8rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: #ff582a;
+  color: #fff;
+  width: 9.6rem;
+  height: 9.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2.4rem;
+  font-weight: 600;
+
+  &::after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-left-color: #ff582a;
+    border-bottom-color: #ff582a;
+    transform: rotate(-45deg);
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+.video {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 14px;
+  aspect-ratio: 2/1;
+  button {
+    position: absolute;
+  }
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6.4rem;
+}
+
+.shape {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 8rem;
+  height: 8rem;
+  background-color: #dcebf7;
+  color: #ff582a;
+  margin-right: -1.4rem;
+}

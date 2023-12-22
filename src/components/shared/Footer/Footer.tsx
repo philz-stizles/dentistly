@@ -5,9 +5,16 @@ import {
 } from 'react-icons/pi';
 import classes from './Footer.module.scss';
 
-const Footer = () => {
+type Props = {
+  className?: string;
+};
+
+const Footer = ({ className }: Props) => {
+  let classNames = classes.footer;
+  classNames += className ? ` ${className}` : '';
+
   return (
-    <footer className={classes.footer}>
+    <footer className={classNames}>
       <p>Your Smile, Our Passion</p>
       <div className={classes.right}>
         <ul className={classes.social}>
