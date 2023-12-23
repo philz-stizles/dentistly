@@ -1,3 +1,4 @@
+import { Ref, forwardRef } from 'react';
 import { Size } from '../../../types';
 import classes from './Heading.module.scss';
 
@@ -14,16 +15,18 @@ type Props = {
   size?: Size;
 };
 
-const Heading = ({ className, title, size = 'sm' }: Props) => {
-  let classNames = classes.heading;
-  classNames += ` ${SIZE[size]}`;
-  classNames += className ? ` ${className}` : '';
+const Heading = forwardRef(
+  ({ className, title, size = 'sm' }: Props, ref: Ref<HTMLDivElement>) => {
+    let classNames = classes.heading;
+    classNames += ` ${SIZE[size]}`;
+    classNames += className ? ` ${className}` : '';
 
-  return (
-    <div className={classNames}>
-      <h1>{title}</h1>
-    </div>
-  );
-};
+    return (
+      <div ref={ref} className={classNames}>
+        <h1>{title}</h1>
+      </div>
+    );
+  }
+);
 
 export default Heading;

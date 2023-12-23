@@ -10,6 +10,9 @@ type Props = {
   advantages: Advantage[];
 };
 
+const MotionHeading = motion(Heading);
+const MotionFooter = motion(Footer);
+
 const Advantages = ({ advantages }: Props) => {
   return (
     <motion.section
@@ -18,10 +21,26 @@ const Advantages = ({ advantages }: Props) => {
       className={classes.advantages}
     >
       <div className={classes.container}>
-        <Footer />
+        <MotionFooter
+          transition={{ delay: 0.5, duration: 0.5 }}
+          initial={{ opacity: 0, y: '50%' }}
+          whileInView={{ opacity: 1, y: '-50%' }}
+        />
       </div>
-      <Heading size="xl" className={classes.heading} title="Our Advantages" />
-      <ul className={classes['advantage-list']}>
+      <MotionHeading
+        transition={{ delay: 0.5, duration: 0.5 }}
+        initial={{ opacity: 0, y: '50%' }}
+        whileInView={{ opacity: 1, y: '-50%' }}
+        size="xl"
+        className={classes.heading}
+        title="Our Advantages"
+      />
+      <motion.ul
+        transition={{ delay: 0.5, duration: 0.5 }}
+        initial={{ opacity: 0, y: '50%', x: '-50%' }}
+        whileInView={{ opacity: 1, y: '-50%', x: '-50%' }}
+        className={classes['advantage-list']}
+      >
         {advantages.map((advantage, i) => (
           <AdvantageCard
             index={i}
@@ -30,9 +49,9 @@ const Advantages = ({ advantages }: Props) => {
             advantage={advantage}
           />
         ))}
-      </ul>
+      </motion.ul>
       <button className={classes.scroll}>
-        <GoArrowDown size={24} />
+        <GoArrowDown size={28} />
       </button>
     </motion.section>
   );

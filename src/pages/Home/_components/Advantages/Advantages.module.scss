@@ -18,14 +18,14 @@
   left: 0;
   right: 0;
   text-align: center;
-  transform: translateY(-50%);
+  // transform: translateY(-50%);
 }
 
 .advantage-list {
   position: absolute;
   top: 54%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 1000;
   width: 28rem;
   height: 32rem;
@@ -44,8 +44,15 @@
   bottom: 0%;
   left: 50%;
   transform: translate(-50%, 50%);
-  border-radius: 50%;
+  // border-radius: 50%;
   width: 12rem;
   height: 12rem;
   border: 1px solid #212529;
+  border-top-left-radius: 110px; /* 100px of height + 10px of border */
+  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  border-bottom: 0;
+
+  svg {
+    transform: translateY(-36%);
+  }
 }

@@ -4,17 +4,18 @@ import {
   PiYoutubeLogoLight,
 } from 'react-icons/pi';
 import classes from './Footer.module.scss';
+import { Ref, forwardRef } from 'react';
 
 type Props = {
   className?: string;
 };
 
-const Footer = ({ className }: Props) => {
+const Footer = forwardRef(({ className }: Props, ref: Ref<HTMLDivElement>) => {
   let classNames = classes.footer;
   classNames += className ? ` ${className}` : '';
 
   return (
-    <footer className={classNames}>
+    <footer ref={ref} className={classNames}>
       <p>Your Smile, Our Passion</p>
       <div className={classes.right}>
         <ul className={classes.social}>
@@ -32,6 +33,6 @@ const Footer = ({ className }: Props) => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;

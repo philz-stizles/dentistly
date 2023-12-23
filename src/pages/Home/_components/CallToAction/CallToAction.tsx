@@ -1,4 +1,5 @@
 import { PiPlus, PiToothDuotone, PiToothLight } from 'react-icons/pi';
+import { IoMdFlower } from 'react-icons/io';
 import { motion } from 'framer-motion';
 import { Footer } from '../../../../components/shared';
 import { Avatar, Button, Heading, IconButton } from '../../../../components/ui';
@@ -36,8 +37,10 @@ const CallToAction = () => {
           </div>
           <Heading size="lg" title="Dental" />
           <div className={classes.care}>
-            <Avatar size="xl" imageUrl="https://i.pravatar.cc/100?img=45" />
-            <div className={classes.shape}></div>
+            <Avatar className={classes.avatar} size="xl" imageUrl="https://i.pravatar.cc/100?img=45" />
+            <div className={classes.shape}>
+              <IoMdFlower size={48} />
+            </div>
           </div>
           <Heading size="lg" title="Care" />
         </div>

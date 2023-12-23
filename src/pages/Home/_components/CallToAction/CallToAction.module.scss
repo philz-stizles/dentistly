@@ -138,5 +138,12 @@
   height: 8rem;
   background-color: #dcebf7;
   color: #ff582a;
-  margin-right: -1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape,
+.avatar {
+  margin-right: -1.8rem;
 }
