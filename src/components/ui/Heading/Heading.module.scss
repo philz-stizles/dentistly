@@ -1,24 +1,23 @@
 .heading {
+  h1 {
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-weight: 400;
+  }
 }
 
-.heading h1 {
-  text-transform: uppercase;
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-.sm h1{
+.sm h1 {
   font-size: 5.2rem;
 }
 
-.md h1{
-  font-size: 7.4rem;
+.md h1 {
+  font-size: 6.4rem;
 }
 
-.lg h1{
+.lg h1 {
   font-size: 9.8rem;
 }
 
-.xl h1{
+.xl h1 {
   font-size: 14rem;
 }

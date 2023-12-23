@@ -12,6 +12,7 @@ type Props = {
 
 const MotionHeading = motion(Heading);
 const MotionFooter = motion(Footer);
+const MotionAdvantageCard = motion(AdvantageCard);
 
 const Advantages = ({ advantages }: Props) => {
   return (
@@ -42,10 +43,10 @@ const Advantages = ({ advantages }: Props) => {
         className={classes['advantage-list']}
       >
         {advantages.map((advantage, i) => (
-          <AdvantageCard
+          <MotionAdvantageCard
+            key={advantage.id}
             index={i}
             className={classes['advantage-card']}
-            key={advantage.id}
             advantage={advantage}
           />
         ))}

@@ -28,9 +28,13 @@ const Button = ({
   icon: Icon,
   variant = 'primary',
   size = 'md',
+  className,
   ...rest
 }: Props) => {
-  const classNames = `${classes['icon-button']} ${VARIANT[variant]} ${SIZE[size]}`;
+  let classNames = classes['icon-button'];
+  classNames += ` ${VARIANT[variant]}`;
+  classNames += ` ${SIZE[size]}`;
+  classNames += `${className ? ` ${className}` : ''}`;
 
   return (
     <button className={classNames} {...rest}>

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Footer } from '../../../../components/shared';
 import { Avatar, Button, Heading, IconButton } from '../../../../components/ui';
 import classes from './CallToAction.module.scss';
+import { IoPlaySharp } from 'react-icons/io5';
 
 const CallToAction = () => {
   return (
@@ -12,7 +13,7 @@ const CallToAction = () => {
       whileInView={{ opacity: 1 }}
       className={classes['call-to-action']}
     >
-      <div className={classes.heading}>
+      <motion.div className={classes.heading}>
         <div className={classes.revolutionizing}>
           <Heading size="lg" title="Revolutionizing" />
           <div>
@@ -37,7 +38,11 @@ const CallToAction = () => {
           </div>
           <Heading size="lg" title="Dental" />
           <div className={classes.care}>
-            <Avatar className={classes.avatar} size="xl" imageUrl="https://i.pravatar.cc/100?img=45" />
+            <Avatar
+              className={classes.avatar}
+              size="xl"
+              imageUrl="https://i.pravatar.cc/100?img=45"
+            />
             <div className={classes.shape}>
               <IoMdFlower size={48} />
             </div>
@@ -65,10 +70,16 @@ const CallToAction = () => {
           </div>
         </div>
         <div className={classes['get-started']}>Get Started</div>
-        {/* <div className={classes.video}>
-          <IconButton icon={IoPlaySharp} />
-        </div> */}
-      </div>
+        <div className={classes.video}>
+          <img src="/images/fauxels-md.jpg" />
+          <IconButton
+            className={classes['video-icon']}
+            variant="secondary"
+            size='sm'
+            icon={IoPlaySharp}
+          />
+        </div>
+      </motion.div>
 
       <Footer />
     </motion.section>
